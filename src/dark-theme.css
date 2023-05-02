@@ -1,0 +1,131 @@
+/* Default light mode styles */
+:root {
+    --bg-color: #e4e4e4;
+    --text-color: #333333;
+}
+
+body.light-mode {
+    --bg-color: #e4e4e4;
+    --text-color: #000000;
+}
+
+body.dark-mode {
+    --bg-color: #000000;
+    --text-color: #ffffff;
+}
+
+.App {
+    text-align: center;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.white-content {
+    background: var(--bg-color);
+}
+
+.auth-form-container,
+.login-form,
+.register-form {
+    background-color: white;
+    color: var(--text-color);
+}
+
+/* Dark mode styles */
+.dark-mode .App {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.dark-mode .white-content {
+    background: var(--bg-color);
+}
+
+.dark-mode .auth-form-container,
+.dark-mode .login-form,
+.dark-mode .register-form {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* Toggle button styles */
+.toggle-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: #f1ecec;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #333333;
+}
+
+.toggle-button:focus {
+    outline: none;
+}
+
+.toggle-button .toggle-icon {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.toggle-button .toggle-icon:before,
+.toggle-button .toggle-icon:after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background-color: #e6dcdc;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.3s ease;
+}
+
+.toggle-button .toggle-icon:before {
+    top: 50%;
+    left: 25%;
+}
+
+.toggle-button .toggle-icon:after {
+    top: 50%;
+    right: 25%;
+}
+
+.dark-mode .toggle-button .toggle-icon:before,
+.dark-mode .toggle-button .toggle-icon:after {
+    background-color: #ffffff;
+}
+
+.dark-mode .toggle-button .toggle-icon-text {
+    color: #ffffff;
+}
+
+.dark-mode .toggle-button .toggle-icon:before,
+.dark-mode .toggle-button .toggle-icon:after {
+    background-color: #ffffff;
+}
+
+/* Light mode toggle button styles */
+.light-mode .toggle-button {
+    background-color: #f1ecec;
+    color: #333333;
+}
+
+.light-mode .toggle-button .toggle-icon:before,
+.light-mode .toggle-button .toggle-icon:after {
+    background-color: #e1dcdc;
+}
