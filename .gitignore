@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+pyvenv.cfg
+include
+__pycache__
+bin
+lib
